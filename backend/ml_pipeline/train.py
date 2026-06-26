@@ -45,3 +45,21 @@ joblib.dump(
 )
 
 print("Model saved successfully!")
+
+import json
+
+feature_importance = {
+    feature: float(importance)
+    for feature, importance in zip(
+        X.columns,
+        model.feature_importances_
+    )
+}
+
+with open(
+    "backend/models/feature_importance.json",
+    "w"
+) as f:
+    json.dump(feature_importance, f, indent=4)
+
+print("Feature importance saved.")

@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
 import pandas as pd
+import json
+from fastapi.responses import JSONResponse
 
 app = FastAPI(
     title="Purchase Prediction API",
@@ -63,3 +65,14 @@ def predict(customer: Customer):
         "category":
             category
     }
+@app.get("/feature-importance")
+def feature_importance():
+
+    with open(
+        "backend/models/feature_importance.json",
+        "r"
+    ) as file:
+
+        data = json.load(file)
+
+    return JSONResponse(content=data)

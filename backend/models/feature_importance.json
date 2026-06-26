@@ -1,0 +1,13 @@
+{
+    "Age": 0.024852499647289847,
+    "Annual_Income": 0.029337671457313176,
+    "Family_Size": 0.014297726083663058,
+    "Product_Price": 0.030218337322874985,
+    "Availability": 0.00448771001545765,
+    "Discount_Percentage": 0.4906564890198109,
+    "Previous_Purchases": 0.062327066987494205,
+    "Website_Visits": 0.2430820745732423,
+    "Time_Spent_Minutes": 0.027032818856019176,
+    "Cart_Additions": 0.03270176433104887,
+    "Need_Score": 0.041005841705785986
+}
